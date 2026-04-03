@@ -1,0 +1,67 @@
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.scan-line {
+  animation: scan 2s ease-in-out infinite;
+}
+
+@keyframes scan {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass {
+  backdrop-filter: blur(24px);
+  background: rgba(0,0,0, 0.4);
+  border: 1px solid rgba(255,255,255, 0.1);
+}
+
+.tracing-beam {
+  background: linear-gradient(90deg, transparent, #2979FF, transparent);
+  animation: trace 2s linear infinite;
+}
+
+@keyframes trace {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#reader {
+  border: none !important;
+}
+
+#reader__scan_region {
+  border: 2px solid #2979FF !important;
+}
+
+#reader__dashboard_section {
+  display: none !important;
+}

@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\91775\\OneDrive\\Documents\\Desktop\\Blockchain\\Meta\\app - Copy\\contracts\\contracts\\ProductRegistry.sol": {
+      "lastModificationDate": 1771350123250,
+      "contentHash": "56b3adce35127c429d0c9f9969b33cc5",
+      "sourceName": "contracts/ProductRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ProductRegistry"
+      ]
+    }
+  }
+}

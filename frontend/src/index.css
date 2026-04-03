@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+
+  --primary: 217 91% 60%;
+  /* Electric Blue */
+  --primary-foreground: 0 0% 98%;
+
+  --success: 142 70% 45%;
+  /* Emerald Green */
+  --success-foreground: 0 0% 98%;
+
+  --destructive: 348 83% 47%;
+  /* Neon Red */
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-200 antialiased selection:bg-fuchsia-500/30;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-zinc-900/80 backdrop-blur-xl border border-zinc-700/50;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl shadow-2xl transition-all duration-300 hover:bg-zinc-800/80 hover:border-zinc-600/50;
+  }
+
+  .glass-input {
+    @apply bg-zinc-950/50 border border-zinc-700/50 rounded-xl focus:ring-2 focus:ring-fuchsia-500/50 focus:border-fuchsia-500/50 transition-all outline-none h-12 px-4;
+  }
+
+  .btn-primary {
+    @apply bg-fuchsia-500 hover:bg-fuchsia-400 text-zinc-950 font-extrabold px-6 py-3 rounded-xl transition-all active:scale-95 shadow-[0_0_20px_rgba(217,70,239,0.3)];
+  }
+
+  .heading-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500;
+  }
+
+  .fuchsia-glow {
+    @apply shadow-[0_0_30px_rgba(217,70,239,0.3)];
+  }
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s infinite;
+}
+
+.animate-scan-line {
+  animation: scan-line 2s linear infinite;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  @apply bg-zinc-800/50 animate-pulse rounded;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+}
